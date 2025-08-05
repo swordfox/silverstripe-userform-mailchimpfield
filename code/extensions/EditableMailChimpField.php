@@ -142,7 +142,7 @@ class EditableMailChimpField extends EditableFormField
             "Root.Main",
             array(
                 LiteralField::create("MailChimpStart", "<h4>MailChimp Configuration</h4>")->setAttribute("disabled", $fieldsStatus),
-                DropdownField::create("ListID", 'Subscripers List', $this->getLists()->map("ListID", "Name"))
+                DropdownField::create("ListID", 'Subscribers List', $this->getLists()->map("ListID", "Name"))
                     ->setEmptyString("Choose a MailChimp List")
                     ->setAttribute("disabled", $fieldsStatus),
                 TextField::create("TagsToAssign", 'Tags To Assign')
@@ -235,7 +235,7 @@ class EditableMailChimpField extends EditableFormField
             $data = [
                 'email_address' => $emailaddress,
                 'status'        => 'subscribed',
-                'tags'          => null,
+                'tags'          => [],
                 'merge_fields' => $mergefields,
             ];
 

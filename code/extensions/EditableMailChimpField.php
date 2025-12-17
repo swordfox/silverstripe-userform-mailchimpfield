@@ -98,7 +98,7 @@ class EditableMailChimpField extends EditableFormField
                 }
             ],
             'Value' => [
-                'title' => 'Merge Field (e.g. FNAME, LNAME, ADDRESS or PHONE etc.)',
+                'title' => 'Merge Field (e.g. MMERGE1, MMERGE2, MMERGE3 etc.)',
                 'callback' => function ($record, $column, $grid) {
                     return TextField::create($column);
                 }

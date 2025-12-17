@@ -210,10 +210,14 @@ class EditableMailChimpField extends EditableFormField
 
             $list_id = $this->owner->getField('ListID');
 
-            $tags = null;
+            $tags = false;
 
             if ($this->owner->getField('TagsToAssign') != '') {
                 $tags = preg_split('/\s*,\s*/', $this->owner->getField('TagsToAssign'), -1, PREG_SPLIT_NO_EMPTY);
+
+                if (count($tags) == 0) {
+                    $tags = false;
+                }
             }
 
             $emailaddress = $data[$this->owner->getField('EmailField')];

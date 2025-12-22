@@ -239,7 +239,6 @@ class EditableMailChimpField extends EditableFormField
             $data = [
                 'email_address' => $emailaddress,
                 'status'        => 'subscribed',
-                'tags'          => null,
                 'merge_fields' => $mergefields,
             ];
 
